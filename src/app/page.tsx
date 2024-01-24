@@ -129,10 +129,7 @@ export default function Home() {
         </ul>
 
       </section>
-      <footer className="min-h-[30vh] bg-gradient-to-b from-orange-50 to-orange-100 w-full flex flex-col justify-between">
-        <Image className="bg-white rounded-full object-cover w-24 h-24 block mx-auto my-10" src={'/caneca-sem-fundo.png'} width={150} height={150} alt="logo" />
-        <span className="text-center block mb-2">Made by lypes.agency</span>
-      </footer>
+
     </main>
   );
 }
