@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Image from "next/image";
+import { ArrowRightIcon, Menu } from "lucide-react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +18,25 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <nav className="top-0 w-full flex px-10 lg:px-24 shadow-sm pb-1">
+          <div className="flex items-center justify-between w-full">
+            <Image className="w-[50px] drop-shadow-lg" src={'/caneca-sem-fundo.png'} width={150} height={150} alt="logo" />
+            <span className="ml-2 font-bold text-xl text-zinc-800 drop-shadow-sm">SpecialMug</span>
+            <ul className="hidden gap-5 ml-12 text-zinc-600 lg:flex">
+              <li>
+                Home
+              </li>
+              <li>Sobre n&oacute;s</li>
+              <li>Sobre o produto</li>
+            </ul>
+            <div className="ml-auto justify-self-end p-1 bg-[#af3e0d] rounded-full">
+              <Menu className="text-white " size={'1.25rem'} />
+            </div>
+          </div>
+        </nav>
+        {children}
+      </body>
     </html>
   );
 }
